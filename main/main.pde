@@ -4,8 +4,5 @@ void setup() {
 }
 
 void draw(){
-  /*
-  fill(0,0,0);
-  ellipse(200, 300, 100, 100); // 円(座標x, 座標y, width, height);
-  */
+  
 }
