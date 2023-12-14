@@ -7,11 +7,12 @@ void game(int playTurn) {
   if (playTurn%2 == 1) { //先手(黒)
     if (mousePressed == true) {
       WriteGoStoneBlack(x, y);
-      noLoop();
+      noLoop();  //長押し対策
     }
   } else if (playTurn%2 == 0) { //後手(白)
     if (mousePressed == true) {
       WriteGoStoneWhite(x, y);
+      noLoop();
     }
   }
 }
