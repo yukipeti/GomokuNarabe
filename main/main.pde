@@ -13,5 +13,12 @@ void setup() {
 
 void draw(){
   game(playTurn);
-  
+}
+void mousePressed() {
+  loop(); 
+  playTurn++;
+}
+
+void mouseReleased() {
+  noLoop(); 
 }
