@@ -1,22 +1,17 @@
 //ゲームの勝敗の判定
 
-int[][] boardScan;
+int gX, gY;  //碁石を置いた場所の配列の座標
 
-//盤面の調査のための配列を初期化(set()で初期化を行う)
-void initArray() {
-  boardScan = new int[15][15];
-  for (int i =0; i < 15; i++) {
-    for (int j = 0; j < 15; j++) {
-      boardScan[i][j] = 0;
-    }
-  }
-}
-
-int mX, mY;  //碁石を置いた時のマウスの座標
-
-void JudgeWin() {
+void JudgeWin(int playTurn,int[][] boardScan) {
   if (mousePressed == true) {
-    mX = ArrageCodX();
-    mY = ArrageCodY();
+    gX = (ArrageCodX() - 35) / 70;
+    gY = (ArrageCodY() - 35) / 70;
+
+    if (playTurn%2 == 1) {
+      boardScan[gX][gY] = 1;
+    } else if (playTurn%2 == 0) {
+      boardScan[gX][gY] = 2;
+    }
+    
   }
 }

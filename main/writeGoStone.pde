@@ -2,12 +2,7 @@
 
 PImage goStoneWhite;
 PImage goStoneBlack;
-/*
-void setImage(PImage white, PImage black) {
-  goStoneWhite = white;
-  goStoneBlack = black;
-}
-*/
+
 void WriteGoStoneWhite(int boardX, int boardY) {
   goStoneWhite = loadImage("../data/goStoneWhite.png");
   imageMode(CENTER);
