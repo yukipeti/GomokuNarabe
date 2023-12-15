@@ -1,3 +1,5 @@
+//盤面の出力
+
 void WriteBoard() {
   int sizeX = width;
   int sizeY = height;

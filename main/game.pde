@@ -1,8 +1,8 @@
+//ゲームの進行を行う
+
 void game(int playTurn) {
-  int x = ArrageCodX(mouseX);  //X座標
-  int y = ArrageCodY(mouseY);  //Y座標
-  println(x);
-  println(y);
+  int x = ArrageCodX();  //X座標
+  int y = ArrageCodY();  //Y座標
 
   if (playTurn%2 == 1) { //先手(黒)
     if (mousePressed == true) {
