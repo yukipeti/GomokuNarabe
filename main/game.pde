@@ -12,13 +12,16 @@ void game(int playTurn, int[][] boardScan) {
     if (playTurn%2 == 1) { //先手(黒)
       if (mousePressed == true) {
         WriteGoStoneBlack(x, y);
-        noLoop();  //長押し対策
+      
+        //noLoop();  //長押し対策
       }
     } else if (playTurn%2 == 0) { //後手(白)
       if (mousePressed == true) {
         WriteGoStoneWhite(x, y);
-        noLoop();
+
+        //noLoop();
       }
     }
+    println(playTurn);
   }
 }
