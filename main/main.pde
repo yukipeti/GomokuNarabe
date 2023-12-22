@@ -16,30 +16,19 @@ void setup() {
 }
 
 void draw() {
-}
-
-void mousePressed() {
   game(playTurn, boardScan);
-  JudgeWin(playTurn, boardScan);
 }
 
-//同じときには置けないけどターンは加算されるじょ
-//配列等には加算されてれてる
 void mouseReleased() {
   x = (ArrageCodX() - 35) / 70;
   y = (ArrageCodY() - 35) / 70;
 
-  //println(boardScan[x][y]);
-
-  if (boardScan[x][y]%2 == playTurn%2) {
+  if (boardScan[x][y] == 0) {
     playTurn++;
     loop();
-  } else if (boardScan[x][y]%2 != playTurn%2) {
+  } else if (boardScan[x][y] != 0) {
     loop();
   }
-  
+
+  JudgeWin(playTurn, boardScan);
 }
-/*
- x = (ArrageCodX() - 35) / 70;
- y = (ArrageCodY() - 35) / 70;
-*/
