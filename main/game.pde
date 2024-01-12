@@ -9,13 +9,13 @@ void game(int playTurn, int[][] boardScan) {
   int gY = (y - 35) / 70;
 
   if (boardScan[gX][gY] == 0) {
-    if (playTurn%2 == 1) { //先手(黒)
+    if (playTurn%2 == 0) { //先手(黒)
       if (mousePressed == true) {
         WriteGoStoneBlack(x, y);
         
         noLoop();  //長押し対策
       }
-    } else if (playTurn%2 == 0) { //後手(白)
+    } else if (playTurn%2 == 1) { //後手(白)
       if (mousePressed == true) {
         WriteGoStoneWhite(x, y);
         

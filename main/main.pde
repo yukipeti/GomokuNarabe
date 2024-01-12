@@ -1,5 +1,5 @@
 int[][] boardScan; //<>//
-int playTurn  = 1;
+int playTurn  = 0;
 int x = 0, y = 0;
 
 void setup() {
@@ -24,8 +24,9 @@ void mouseReleased() {
   y = (ArrageCodY() - 35) / 70;
 
   if (boardScan[x][y] == 0) {
-    playTurn++;
+    
     loop();
+    playTurn++;
   } else if (boardScan[x][y] != 0) {
     loop();
   }

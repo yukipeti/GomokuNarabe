@@ -35,4 +35,27 @@ void JudgeWin(int playTurn, int[][] boardScan) {
       }
     }
   }
+  GameFinish(judge);
+  //右横
+  for (int i = 0; i < 5; i++) {
+    if (gX <= 10) {
+      if (boardScan[gX+i][gY] != 0) {
+        judge[i] = playTurn % 2;
+      }
+    }
+  }
+  GameFinish(judge);
+  //左横
+  for (int i = 0; i < 5; i++) {
+    if (gX >= 4) {
+      if (boardScan[gX-i][gY] != 0) {
+        judge[i] = playTurn % 2;
+      }
+    }
+  }
+  GameFinish(judge);
+  
+  for(int i = 0; i < 5; i++){
+   println(judge[i]); 
+  }
 }
