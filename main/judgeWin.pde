@@ -41,6 +41,7 @@ void JudgeWin(int playTurn, int[][] boardScan) {
     if (gX <= 10) {
       if (boardScan[gX+i][gY] != 0) {
         judge[i] = playTurn % 2;
+        println(judge[i]);
       }
     }
   }
@@ -55,7 +56,4 @@ void JudgeWin(int playTurn, int[][] boardScan) {
   }
   GameFinish(judge);
   
-  for(int i = 0; i < 5; i++){
-   println(judge[i]); 
-  }
 }
