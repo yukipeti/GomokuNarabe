@@ -24,7 +24,6 @@ void mouseReleased() {
   y = (ArrageCodY() - 35) / 70;
 
   if (boardScan[x][y] == 0) {
-    
     loop();
     playTurn++;
   } else if (boardScan[x][y] != 0) {

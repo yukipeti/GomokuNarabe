@@ -8,6 +8,8 @@ void GameFinish(int[] judge) {
       finish_2++;
     }
   }
+  println(finish_1);
+  println(finish_2);
   if (finish_1 == 5) {
     println("1player win");
     delay(2000);

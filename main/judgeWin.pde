@@ -21,39 +21,62 @@ void JudgeWin(int playTurn, int[][] boardScan) {
   //下縦の判定
   for (int i = 0; i < 5; i++) {
     if (gY <= 10) {
-      if (boardScan[gX][gY+i] != 0) {
-        judge[i] = playTurn % 2;
-      }
+
+      judge[i] = boardScan[gX][gY+i];
     }
   }
   GameFinish(judge);
   //上縦
   for (int i = 0; i < 5; i++) {
     if (gY >= 4) {
-      if (boardScan[gX][gY-i] != 0) {
-        judge[i] = playTurn % 2;
-      }
+
+      judge[i] = boardScan[gX][gY-i];
     }
   }
   GameFinish(judge);
   //右横
   for (int i = 0; i < 5; i++) {
     if (gX <= 10) {
-      if (boardScan[gX+i][gY] != 0) {
-        judge[i] = playTurn % 2;
-        println(judge[i]);
-      }
+
+      judge[i] = boardScan[gX+i][gY];
+      //println(playTurn);
     }
   }
   GameFinish(judge);
   //左横
   for (int i = 0; i < 5; i++) {
     if (gX >= 4) {
-      if (boardScan[gX-i][gY] != 0) {
-        judge[i] = playTurn % 2;
-      }
+
+      judge[i] = boardScan[gX-i][gY];
     }
   }
   GameFinish(judge);
-  
+  //右上斜め
+  for (int i = 0; i < 5; i++) {
+    if (gX <= 10 && gY >= 4) {
+      judge[i] = boardScan[gX+i][gY-i];
+    }
+  }
+  GameFinish(judge);
+  //左上斜め
+  for (int i = 0; i < 5; i++) {
+    if (gX >=4 && gY >=4) {
+      judge[i] = boardScan[gX-i][gY-i];
+    }
+  }
+  GameFinish(judge);
+  //右下斜め
+  for (int i = 0; i < 5; i++) {
+    if (gX <= 10 && gY <= 10) {
+      judge[i] = boardScan[gX+i][gY+i];
+    }
+  }
+  GameFinish(judge);
+  //左下斜め
+  for (int i = 0; i < 5; i++) {
+    if (gX >= 4 && gY <= 10) {
+      judge[i] = boardScan[gX-i][gY+i];
+    }
+  }
+  GameFinish(judge);
 }
