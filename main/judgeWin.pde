@@ -21,7 +21,6 @@ void JudgeWin(int playTurn, int[][] boardScan) {
   //下縦の判定
   for (int i = 0; i < 5; i++) {
     if (gY <= 10) {
-
       judge[i] = boardScan[gX][gY+i];
     }
   }
@@ -29,7 +28,6 @@ void JudgeWin(int playTurn, int[][] boardScan) {
   //上縦
   for (int i = 0; i < 5; i++) {
     if (gY >= 4) {
-
       judge[i] = boardScan[gX][gY-i];
     }
   }
@@ -37,16 +35,13 @@ void JudgeWin(int playTurn, int[][] boardScan) {
   //右横
   for (int i = 0; i < 5; i++) {
     if (gX <= 10) {
-
       judge[i] = boardScan[gX+i][gY];
-      //println(playTurn);
     }
   }
   GameFinish(judge);
   //左横
   for (int i = 0; i < 5; i++) {
     if (gX >= 4) {
-
       judge[i] = boardScan[gX-i][gY];
     }
   }

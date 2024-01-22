@@ -1,4 +1,4 @@
-int[][] boardScan; //<>//
+int[][] boardScan; //<>// //<>//
 int playTurn  = 0;
 int x = 0, y = 0;
 
