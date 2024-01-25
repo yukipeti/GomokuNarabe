@@ -1,4 +1,4 @@
-int[][] boardScan; //<>// //<>//
+int[][] boardScan; //<>//
 int playTurn  = 0;
 int x = 0, y = 0;
 
@@ -17,18 +17,4 @@ void setup() {
 
 void draw() {
   game(playTurn, boardScan);
-}
-
-void mouseReleased() {
-  x = (ArrageCodX() - 35) / 70;
-  y = (ArrageCodY() - 35) / 70;
-
-  if (boardScan[x][y] == 0) {
-    loop();
-    playTurn++;
-  } else if (boardScan[x][y] != 0) {
-    loop();
-  }
-
-  JudgeWin(playTurn, boardScan);
 }

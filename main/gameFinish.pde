@@ -8,15 +8,15 @@ void GameFinish(int[] judge) {
       finish_2++;
     }
   }
-  println(finish_1);
-  println(finish_2);
   if (finish_1 == 5) {
     println("1player win");
     delay(2000);
+    noLoop();
     exit();
   } else if (finish_2 == 5) {
     println("2player win");
     delay(2000);
+    noLoop();
     exit();
   } else {
     finish_1 = 0;
