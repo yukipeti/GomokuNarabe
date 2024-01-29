@@ -4,6 +4,7 @@ int x = 0, y = 0;
 
 void setup() {
   size(1050, 1050);
+  
   WriteBoard(); //盤面の生成
 
   boardScan = new int[15][15];
