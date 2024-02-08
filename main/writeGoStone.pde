@@ -4,7 +4,7 @@ PImage goStoneWhite;
 PImage goStoneBlack;
 
 void WriteGoStoneWhite(int boardX, int boardY) {
-  goStoneWhite = loadImage("../data/goStoneWhite.png");
+  goStoneWhite = loadImage("goStoneWhite.png");
   imageMode(CENTER);
   goStoneWhite.resize(60, 60);
 
@@ -12,7 +12,7 @@ void WriteGoStoneWhite(int boardX, int boardY) {
 }
 
 void WriteGoStoneBlack(int boardX, int boardY) {
-  goStoneBlack = loadImage("../data/goStoneBlack.png");
+  goStoneBlack = loadImage("goStoneBlack.png");
   imageMode(CENTER);
   goStoneBlack.resize(60, 60);
 

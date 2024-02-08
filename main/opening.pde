@@ -1,3 +1,6 @@
-void Opening(){
+
+
+void Opening(Movie op){
   
+  op.loop();
 }
