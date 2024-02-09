@@ -9,14 +9,14 @@ void GameFinish(int[] judge) {
     }
   }
   if (finish_1 == 5) {
+    noLoop();
     println("1player win");
     delay(2000);
-    noLoop();
     exit();
   } else if (finish_2 == 5) {
+    noLoop();
     println("2player win");
     delay(2000);
-    noLoop();
     exit();
   } else {
     finish_1 = 0;

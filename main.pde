@@ -8,11 +8,12 @@ int x = 0, y = 0;
 
 void setup() {
   size(1050, 1050);
- 
+  frameRate(24);
+
   op = new Movie(this, "gomokunarabe_op.mp4");
-  
-  Opening(op);
-  WriteBoard(); //盤面の生成
+
+  op.loop();
+  //WriteBoard();
 
   boardScan = new int[15][15];
   //盤面の調査用の配列の初期化
@@ -24,5 +25,14 @@ void setup() {
 }
 
 void draw() {
+  Opening(op);
+  if (key == ' ') {
+    WriteBoard();
+  }
   game(playTurn, boardScan);
 }
+
+/*めも
+drawにはop関連のみでgame関数はwhileで特定の条件下で実行する形にすればきれいに行くはず
+実装がきもい？知らねぇよ
+*/
