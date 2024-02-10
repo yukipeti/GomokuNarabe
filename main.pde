@@ -3,6 +3,7 @@ import processing.video.*; //<>//
 Movie op;
 
 int[][] boardScan;
+int pressed = 0;
 int playTurn  = 0;
 int x = 0, y = 0;
 
@@ -22,17 +23,30 @@ void setup() {
       boardScan[i][j] = 0;
     }
   }
+  image(op, 0, 0);
 }
 
 void draw() {
-  Opening(op);
-  if (key == ' ') {
-    WriteBoard();
-  }
+
+
+  image(op, 0, 0);
   game(playTurn, boardScan);
 }
 
+void keyPressed() {
+  if (pressed == 0 && key == ' ') {
+    pressed++;
+    op.pause();
+    WriteBoard();
+  }
+}
+
+void movieEvent(Movie op) {
+  if (pressed == 0) {
+    op.read();
+  }
+}
 /*めも
-drawにはop関連のみでgame関数はwhileで特定の条件下で実行する形にすればきれいに行くはず
-実装がきもい？知らねぇよ
-*/
+ drawにはop関連のみでgame関数はwhileで特定の条件下で実行する形にすればきれいに行くはず
+ 実装がきもい？知らねぇよ
+ */
