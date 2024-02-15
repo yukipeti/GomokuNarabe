@@ -10,11 +10,13 @@ void GameFinish(int[] judge) {
   }
   if (finish_1 == 5) {
     println("1player win");
+    Ending();
     delay(2000);
     noLoop();
     exit();
   } else if (finish_2 == 5) {
     println("2player win");
+    Ending();
     delay(2000);
     noLoop();
     exit();
