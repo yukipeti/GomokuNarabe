@@ -27,26 +27,6 @@ void setup() {
 }
 
 void draw() {
-
-
-  image(op, 0, 0);
+  Opening(op,pressed);
   game(playTurn, boardScan);
 }
-
-void keyPressed() {
-  if (pressed == 0 && key == ' ') {
-    pressed++;
-    op.pause();
-    WriteBoard();
-  }
-}
-
-void movieEvent(Movie op) {
-  if (pressed == 0) {
-    op.read();
-  }
-}
-/*めも
- drawにはop関連のみでgame関数はwhileで特定の条件下で実行する形にすればきれいに行くはず
- 実装がきもい？知らねぇよ
- */
