@@ -1,3 +1,6 @@
+int pressed = 0;
+boolean allowGameExit = false;
+
 void GameFinish(int[] judge) {
   int finish_1 = 0;
   int finish_2 = 0;
@@ -8,14 +11,31 @@ void GameFinish(int[] judge) {
       finish_2++;
     }
   }
-  if (finish_1 == 1) {
+  if (finish_1 == 5) {
     println("1player win");
     Ending(1);
+    allowGameExit = true;
   } else if (finish_2 == 5) {
     println("2player win");
     Ending(2);
+    allowGameExit = true;
   } else {
     finish_1 = 0;
     finish_2 = 0;
   }
+}
+
+void keyPressed() {
+  if (pressed == 0 && key == ' ') {
+    pressed++;
+    op.pause();
+    WriteBoard();
+  }
+  if (allowGameExit == true && key == 'f') {
+    exit();
+  }
+  if(key == 'b'){
+     op.pause();
+     WriteBoard();
+  }//バグ用
 }

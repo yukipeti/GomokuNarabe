@@ -3,13 +3,13 @@ import processing.video.*; //<>//
 Movie op;
 
 int[][] boardScan;
-int pressed = 0;
-boolean finish = false;
+
 int playTurn  = 0;
 int x = 0, y = 0;
 
 void setup() {
   size(1050, 1050);
+  frameRate(120);
 
   op = new Movie(this, "gomokunarabe_op.mp4");
 
@@ -26,23 +26,8 @@ void setup() {
 }
 
 void draw() {
-  if(finish) {
-    delay(4000);
-    exit();
-  }
   Opening(op, pressed);
   game(playTurn, boardScan);
-}
-
-void keyPressed() {
-  if (pressed == 0 && key == ' ') {
-    pressed++;
-    op.pause();
-    WriteBoard();
-  }
-  if(key == 'f'){
-   finish = true; 
-  }
 }
 
 void movieEvent(Movie op) {

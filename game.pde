@@ -26,8 +26,8 @@ void game(int playTurn, int[][] boardScan) {
 }
 
 void mouseReleased() {
-  x = (ArrageCodX() - 35) / 70;
-  y = (ArrageCodY() - 35) / 70;
+  int x = (ArrageCodX() - 35) / 70;
+  int y = (ArrageCodY() - 35) / 70;
 
   if (boardScan[x][y] == 0) {
     loop();
