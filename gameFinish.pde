@@ -34,8 +34,4 @@ void keyPressed() {
   if (allowGameExit == true && key == 'f') {
     exit();
   }
-  if(key == 'b'){
-     op.pause();
-     WriteBoard();
-  }//バグ用
 }

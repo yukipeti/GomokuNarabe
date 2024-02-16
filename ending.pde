@@ -7,6 +7,6 @@ void Ending(int player) {
   rect(525, 525, 500, 350);
   fill(0);
   text("player " + player + " WIN", 525, 450);
-  textSize(65);
-  text("Push to F Exit",525,600);
+  textSize(55);
+  text("Push the F key to exit",525,600);
 }
