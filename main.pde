@@ -4,6 +4,7 @@ Movie op;
 
 int[][] boardScan;
 int pressed = 0;
+boolean finish = false;
 int playTurn  = 0;
 int x = 0, y = 0;
 
@@ -25,14 +26,22 @@ void setup() {
 }
 
 void draw() {
-  Opening(op,pressed);
+  if(finish) {
+    delay(4000);
+    exit();
+  }
+  Opening(op, pressed);
   game(playTurn, boardScan);
 }
+
 void keyPressed() {
   if (pressed == 0 && key == ' ') {
     pressed++;
     op.pause();
     WriteBoard();
+  }
+  if(key == 'f'){
+   finish = true; 
   }
 }
 
