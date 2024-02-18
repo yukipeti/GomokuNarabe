@@ -28,7 +28,6 @@ void GameFinish(int[] judge) {
 void keyPressed() {
   if (pressed == 0 && key == ' ') {
     pressed++;
-    op.pause();
     WriteBoard();
   }
   if (allowGameExit == true && key == 'f') {

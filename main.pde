@@ -9,7 +9,6 @@ int x = 0, y = 0;
 
 void setup() {
   size(1050, 1050);
-  frameRate(120);
 
   op = new Movie(this, "gomokunarabe_op.mp4");
 
