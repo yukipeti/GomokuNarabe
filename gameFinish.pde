@@ -34,3 +34,10 @@ void keyPressed() {
     exit();
   }
 }
+
+void keyReleased(){
+  if(pressed == 0 && key == ' '){
+    pressed++;
+    WriteBoard();
+  }
+}
